@@ -2,7 +2,7 @@
 
 html {
     box-sizing: border-box;
-    font-size: 16px;
+    font-size: 10px;
 }
   
 *, *:before, *:after {
@@ -13,7 +13,6 @@ body, h1, h2, h3, h4, h5, h6, p, ol, ul {
     margin: 0;
     padding: 0;
     font-weight: normal;
-    font-size: 10px
  }
   
 ol, ul {
@@ -25,11 +24,8 @@ img {
     height: auto;
 }
 
-/* Fonts */
-
-@font-face {
-    font-family: "Raleway";
-    src: url("fonts/Raleway-VariableFont_wght.ttf") format("ttf");
+li {
+    text-decoration: none;
 }
 
 /* Styles */
@@ -56,27 +52,41 @@ nav {
     width: 100%;
     height: 79px;
     padding: 30px 0;
+    position: relative
+}
+
+h2 {
+    font-size: 2.2rem;
+    font-weight: 700;
+    margin-bottom: 30px;
 }
 
 header, main {
     margin: 0 50px 0 50px;
 }
 
-.nav-links {
+.nav-links-container > ul {
     width: 200px;
     display: flex;
     align-self: flex-start;
     justify-content: space-between;
 }
 
-.nav-link__item > a {
-    text-decoration: none;
-    font-size: 14px;
+.nav-links-container {
+    height: 100%;
 }
 
-.nav-link__item:last-of-type a{
+
+.nav-link__item > a {
+    text-decoration: none;
+    font-size: 1.4rem;
     color: black;
 }
+
+.nav-link__item > a .active {
+    color: var(--Blue);
+}
+
 
 .logo {
     width: 90px;
@@ -94,11 +104,12 @@ header, main {
     margin-bottom: 35px;
 }
 
-.headline h2 {
+.headline h1 {
     font-weight: 700;
     margin-bottom: 8px;
-    font-size: 22px;
+    font-size: 2.2rem;
 }
+
 
 .search-bar form {
     display: flex;
@@ -112,19 +123,27 @@ header, main {
 
 form input[type="text"] {
     text-align: center;
-    font-size: 16px;
+    font-size: 1.6rem;
     padding: 15px 0;
     border: 1px solid var(--Grey);
 }
 
-form input[type="submit"] {
+form .submit{
     padding: 15px 16px;
     border-radius: 0px 15px 15px 0px;
     border: 1px solid var(--Blue);
-    font-size: 16px;
+    font-size: 1.6rem;
     background: var(--Blue); 
     color: white;
     cursor: pointer;
+}
+
+.content-desktop {
+    display: inline-block;
+}
+
+.content-mobile {
+    display: none;
 }
 
 form .geolocation {
@@ -137,7 +156,7 @@ form .geolocation {
 }
 
 form .geolocation > i {
-    font-size: 16px;
+    font-size: 1.6rem;
 }
 
 /* Filter bar */
@@ -145,10 +164,12 @@ form .geolocation > i {
     display: flex;
     justify-content: flex-start;
     align-items: center;
+    flex-wrap: wrap
 }
 
 .filter-bar > * {
     margin-right: 15px;
+    margin-bottom: 20px;
 }
 
 .filter-bar__item {
@@ -170,7 +191,7 @@ form .geolocation > i {
 
 .filter-bar p {
     font-weight: 700;
-    font-size: 1.5em;
+    font-size: 1.4rem;
 }
 
 .icon-container {
@@ -182,7 +203,7 @@ form .geolocation > i {
     background: var(--Blue-Light);
     border-radius: 50%;
     transform: translateX(-22px);
-    font-size: 17px;
+    font-size: 1.7rem;
     padding: 20px;
     color: var(--Blue)
 }
@@ -210,11 +231,6 @@ form .geolocation > i {
     border-radius: 15px;
 }
 
-.offers h2 {
-    font-size: 22px;
-    font-weight: 700;
-    margin-bottom: 30px;
-}
 
 .card {
     border-radius: 20px;
@@ -231,6 +247,7 @@ form .geolocation > i {
 .card-image {
     border-radius: 15px 15px 0 0;
     object-fit: cover;
+
 }
 
 /* Offers cards */
@@ -242,8 +259,6 @@ form .geolocation > i {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     column-gap: 30px;
-    justify-content: space-between;
-    min-width: 600px;
 }
 
 .card-group__main > *, .card-group__sponsored > * {
@@ -251,27 +266,30 @@ form .geolocation > i {
 }
 
 .card-group__main .card {
-    grid-column: span 1;
     padding: 3px;
+    padding-top: 10px;
+    height: 179px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .card-group__main .card-image {
-    height: 130px;
-    width: 100%;
+    height: 65%;
     border-radius: 20px 20px 0 0;
 }
 
 .hotel-info__name {
     font-weight: bold;
-    font-size: 13px;
+    font-size: 1.3rem;
 }
 
 .hotel-info__price {
-    font-size: 12px;
+    font-size: 1.2rem;
 }
 
 .hotel-info__rating {
-    font-size: 12px;
+    font-size: 1.2rem;
 }
 
 .card-group__main .hotel-info {
@@ -279,6 +297,10 @@ form .geolocation > i {
     flex-direction: column;
     justify-content: space-between;
     padding: 5px 0 5px 10px;
+}
+
+.card-group__main .hotel-info p {
+    font-size: 1.4rem;
 }
 
 .hotel-info > * {
@@ -293,7 +315,7 @@ form .geolocation > i {
 
 .offers__sponsored {
     flex: 1;
-    min-width: 280px;
+    position: relative;
 }
 
 .offers__sponsored > div:first-of-type {
@@ -304,6 +326,15 @@ form .geolocation > i {
 
 .offers__sponsored > div:first-of-type img {
     transform: translateY(-13px);
+}
+
+.card-group__sponsored {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 100%;
+    margin-bottom: 15px;
 }
 
 .card-group__sponsored .hotel-info{
@@ -319,8 +350,8 @@ form .geolocation > i {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    height: 124px;
     padding: 3px;
+    height: 120px;
 }
 
 
@@ -352,7 +383,6 @@ form .geolocation > i {
 }
 
 .activities-group > h2 {
-    font-size: 22px;
     font-weight: bold;
     margin-bottom: 30px;
 }
@@ -374,7 +404,7 @@ form .geolocation > i {
 }
 
 .location p {
-    font-size: 13px;
+    font-size: 1.3rem;
     font-weight: bold;
 }
 
@@ -410,16 +440,16 @@ footer {
     padding: 20px;
 }
 
-footer h3 {
+footer h2{
     font-weight: bold;
-    font-size: 18px;
+    font-size: 1.8rem;
     margin-bottom: 15px;
 }
 
 footer a {
     text-decoration: none;
     color: black;
-    font-size: 13px;
+    font-size: 1.3rem;
 }
 
 footer li {
@@ -428,3 +458,111 @@ footer li {
 
 /* Media Queries */
 
+@media screen and (max-width: 579px){
+
+    header {
+        margin: 0
+    }
+
+    main {
+        margin: 0
+    }
+
+    .info-group {
+        margin: 25px;
+    }
+
+    .content-desktop {
+        display: none;
+    }
+
+    .content-mobile {
+        display: inline-block
+    }
+
+    .offers {
+        background: white;;
+    }
+
+    .offers-group {
+        flex-direction: column;
+    }
+
+    .offers-group > * {
+        margin-bottom: 50px;
+    }
+
+    .card-group__main {
+        display: flex;
+        flex-direction: column;
+    }
+
+
+    .card-group__sponsored {
+        order: 1;
+    }
+
+    .offers__sponsored {
+        border-radius: 0;
+        background: var(--Grey);
+    }
+
+    .card-group__activities {
+        display: flex;
+        flex-direction: column;
+        padding: 25px;
+    }
+
+    .card-group__activities .card-image{
+        height: 159px;
+    }
+
+    footer {
+        flex-direction: column;
+    }
+
+    footer > * {
+        margin-bottom: 15px
+    }
+
+    p {
+        font-size: 1.6rem;
+    }
+}
+
+@media screen and (min-width: 580px) and (max-width: 1096px) {
+
+    .content-desktop {
+        display: inline-block;
+    }
+
+    .content-mobile {
+        display: none;
+    }
+
+    .offers-group {
+        flex-direction: column;
+        min-width: 768px;
+    }
+
+    .offers-group > * {
+        margin-bottom: 50px;
+    }
+
+    .card-group__sponsored {
+        display: flex;
+        flex-direction: row;
+        height: auto;
+        column-gap: 10px;
+    }
+
+    .card-group__sponsored .card {
+        width: 100%;
+    }
+
+    .card-group__sponsored .card-image {
+        height: 100%;
+    } 
+
+    
+}
