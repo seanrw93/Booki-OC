@@ -13,16 +13,14 @@
     <header>
         <nav>
             <img class="logo" src="images\logo\Booki.png" alt="Booki">
-            <div class="nav-links-container">
-                <ul>
-                    <li class="nav-link__item">
-                        <a href="#accomodation">Accomodations</a>
-                    </li>
-                    <li class="nav-link__item">
-                        <a href="#activities">Activities</a>
-                    </li>
-                </ul>
-            </div>
+            <ul>
+                <li class="nav-link__item">
+                    <a href="#accomodation">Accomodations</a>
+                </li>
+                <li class="nav-link__item">
+                    <a href="#activities">Activities</a>
+                </li>
+            </ul>
         </nav>
     </header>
 
@@ -40,39 +38,46 @@
                         <i class="fa-solid fa-location-dot"></i>
                     </div>
                     <input type="text" placeholder="Marseille, France" required>
+
                     <input class="submit content-desktop" type="submit" value="Search"> 
                     <!-- Show in desktop mode -->
+
                     <button type="submit" class="submit content-mobile">
                         <i class="fa-solid fa-magnifying-glass"></i>
                     </button>
                     <!-- Show in mobile mode -->
+
                 </form>
             </div>
             <div class="filter-bar">
-                <p class="filter-bar__title"> Filters</p>
-                <div class="filter-bar__item">
-                    <div class="icon-container">
-                        <i class="fa-solid fa-money-bill-wave"></i>
-                    </div>
-                    <p>Low-cost</p>
+                <div class="filter-bar__title">
+                    <p>Filters</p>
                 </div>
-                <div class="filter-bar__item">
-                    <div class="icon-container">
-                        <i class="fa-solid fa-child-reaching"></i>
+                <div class="filter-bar__list">
+                    <div class="filter-bar__item">
+                        <div class="icon-container">
+                            <i class="fa-solid fa-money-bill-wave"></i>
+                        </div>
+                        <p>Low-cost</p>
                     </div>
-                    <p>Family friendly</p>
-                </div>
-                <div class="filter-bar__item">
-                    <div class="icon-container">
-                        <i class="fa-solid fa-heart"></i>
+                    <div class="filter-bar__item">
+                        <div class="icon-container">
+                            <i class="fa-solid fa-child-reaching"></i>
+                        </div>
+                        <p>Family friendly</p>
                     </div>
-                    <p>Romantic</p>
-                </div>
-                <div class="filter-bar__item">
-                    <div class="icon-container">
-                        <i class="fa-solid fa-dog"></i>
+                    <div class="filter-bar__item">
+                        <div class="icon-container">
+                            <i class="fa-solid fa-heart"></i>
+                        </div>
+                        <p>Romantic</p>
                     </div>
-                    <p>Pets allowed</p>
+                    <div class="filter-bar__item">
+                        <div class="icon-container">
+                            <i class="fa-solid fa-dog"></i>
+                        </div>
+                        <p>Pets allowed</p>
+                    </div>
                 </div>
             </div>
             <div class="info-bar">
@@ -169,14 +174,16 @@
                         </div>    
                     </div>
                 </div>
-                <h2>
-                    <a class="show-more">Show more</a>
-                </h2>
+                <p class="show-more">
+                    <a href="#">Show more</a>
+                </p>
             </div>
             <div class="offers offers__sponsored">
                 <div>
                     <h2>Most popular</h2>
-                    <img src="images/graph-icon.svg" class="graph-icon">
+                    <p>
+                        <i class="fa-solid fa-star" style="color: #000000;"></i>
+                    </p>
                 </div>
                 <div class="card-group card-group__sponsored">
                     <div class="card">
@@ -239,14 +246,14 @@
                         <p class="location__name">Old Port</p>
                     </div>    
                 </div>
-                <div class="card ">
-                    <img class="card-image" src="images/activites/4_small/paul-hermann-QFTrLdQIRhI-unsplash.jpg" alt="Calanques National Park">
+                <div class="card">
+                    <img class="card-image card-image--max-height" src="images/activites/4_small/paul-hermann-QFTrLdQIRhI-unsplash.jpg" alt="Pomègues Fort">
                     <div class="location">
                         <p class="location__name">Pomégues Fort</p>
                     </div>    
                 </div>
                 <div class="card card--span-double">
-                    <img class="card-image card--span-double" src="images/activites/4_small/kilyan-sockalingum-NR8-cBCN3aI-unsplash.jpg" alt="Pomègues Fort">
+                    <img class="card-image card--span-double" src="images/activites/4_small/kilyan-sockalingum-NR8-cBCN3aI-unsplash.jpg" alt="Calanques National Park">
                     <div class="location">
                         <p class="location__name">Calanques National Park</p>
                     </div>    
@@ -312,7 +319,6 @@
         </div>
     </footer>
 
-    <script src="script.js" ></script>
 </body>
 
 </html>
