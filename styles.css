@@ -547,6 +547,22 @@ footer li {
         display: inline-block
     }
 
+    .filter-bar__item:first-of-type {
+        order: 1;
+    }
+
+    .filter-bar__item:nth-of-type(2) {
+        order: 3;
+    }
+
+    .filter-bar__item:nth-of-type(3) {
+        order: 2;
+    }
+
+    .filter-bar__item:last-of-type {
+        order: 4;
+    }
+
     .offers {
         background: white;;
     }
