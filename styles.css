@@ -672,7 +672,7 @@ footer li {
 
     .filter-bar__title {
         align-self: flex-start;
-        margin-top: 10px;
+        margin: 10px;
     }
 
     .filter-bar__list {
