@@ -75,9 +75,10 @@ nav > ul {
 .nav-link__item {
     display: flex;
     align-items: center;
-    height: 79px;
+    height: 100%;
     margin-top: -30px;
     border-top: 3px solid #FFF;
+    cursor: pointer;
 }
 
 .nav-link__item:hover {
@@ -86,10 +87,11 @@ nav > ul {
 .nav-link__item > a {
     text-decoration: none;
     font-size: 1.4rem;
-    color: black;
+    color: #000;
+    padding: 20px 0;
 }
 
-.nav-link__item > a:hover{
+.nav-link__item:hover a{
     color: var(--Blue);
 }
 
@@ -431,7 +433,7 @@ form .geolocation > i {
 }
 
 .card-image--max-height {
-    max-height: 180px !important;
+    max-height: 180px;
 }
 
 .location {
@@ -514,6 +516,10 @@ footer li {
         margin-bottom: 110px;
     }
 
+    .logo {
+        transform: translateX(15px);
+    }
+
     nav > ul{
         justify-content: space-evenly;
         width: 100%;
@@ -521,12 +527,14 @@ footer li {
 
     .nav-link__item {
         width: 100%;
-        margin: 0 0 20px 0;
         border-top: none;
         border-bottom: 3px solid #DDD;
         font-weight: bold;
         justify-content: center;
-        cursor: pointer;
+    }
+
+    .nav-link__item a {
+        padding: 80px 0 40px 0;
     }
 
     .nav-link__item:hover {
@@ -536,7 +544,7 @@ footer li {
     }
 
     .info-group {
-        margin: 25px;
+        margin: 0px 25px;
     }
 
     .content-desktop {
