@@ -76,7 +76,7 @@ nav > ul {
     display: flex;
     align-items: center;
     height: 100%;
-    margin-top: -30px;
+    margin-top: -29px;
     border-top: 3px solid #FFF;
     cursor: pointer;
 }
@@ -137,6 +137,7 @@ form input[type="text"] {
     font-size: 1.6rem;
     padding: 15px;
     border: 1px solid var(--Grey);
+    font-weight: 700;
 }
 
 form .submit{
@@ -354,6 +355,7 @@ form .geolocation > i {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin-bottom: -14px;
 }
 
 .offers__sponsored > div:first-of-type p {
@@ -629,6 +631,15 @@ footer li {
         max-height: 180px;
     }
 
+    .offers__sponsored {
+        background-color: var(--Grey);
+        border-radius: 0;
+    }
+
+    .offers__sponsored > div:first-of-type {
+        margin-bottom: 0;
+    }
+
     footer {
         flex-direction: column;
     }
@@ -692,6 +703,10 @@ footer li {
         flex-direction: row;
         height: auto;
         column-gap: 10px;
+    }
+
+    .offers__sponsored > div:first-of-type {
+        margin-bottom: 0;
     }
 
     .card-group__sponsored .card {
